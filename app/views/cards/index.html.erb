@@ -1,0 +1,11 @@
+<h1>検索・登録</h1>
+<%= form_with url: cards_path, method: :get, data: { turbo_frame: "card-list" } do |f| %>
+  <p><%= f.text_field :name, placeholder: "カード名" %></p>
+  <p><%= f.submit "検索" %></p>
+<% end %>
+
+<%= turbo_frame_tag "card-list" do %>
+  <% @cards&.each do |card| %>
+    <%= render partial: "card", locals: {card: card}%>
+  <% end %>
+<% end %>

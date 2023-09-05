@@ -1,0 +1,7 @@
+https_header: "https://"
+scryfall:
+  root_uri: "api.scryfall.com"
+  cards:
+    autocomplete:
+      uri: "/cards/autocomplete"
+      q: "?q="

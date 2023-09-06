@@ -1,5 +1,5 @@
 <tr>
   <td ><%= card %></td>
-  <td><%= link_to "バインダー" %></td>
+  <td><%= link_to "バインダー", new_product_path(name: card), data: { turbo_frame: "modal" } %></td>
   <td><%= link_to "ウィッシュリスト" %></td>
 </tr>

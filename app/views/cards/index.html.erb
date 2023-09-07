@@ -13,11 +13,11 @@
 
 
   <%= turbo_frame_tag "card-list" do %>
-    <table class="table table-sprited">
+    <table class="table">
       <thead>
-      <th scope="col-4">カード名</th>
-      <th scope="col-2"></th>
-      <th scope="col-2"></th>
+      <th scope="col">カード名</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
       </thead>
       <tbody>
       <% @cards&.each do |card| %>

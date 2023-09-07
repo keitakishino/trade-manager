@@ -49,6 +49,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem "config"
+gem "bootstrap_form"
 
 gem "bootstrap"
 gem "sassc-rails"
@@ -71,5 +72,6 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 

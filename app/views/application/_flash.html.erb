@@ -1,0 +1,17 @@
+<% if notice %>
+  <div class="mb-2 toast hide border-primary" data-controller="toast">
+    <div class="toast-header text-primary">
+      <button class="btn-close" data-bs-dismiss="toast">
+    </div>
+    <div class="toast-body"><%= notice %></div>
+  </div>
+<% end %>
+
+<% if alert %>
+  <div class="mb-2 toast hide border-danger" data-controller="toast">
+    <div class="toast-header text-danger">
+      <button class="btn-close" data-bs-dismiss="toast">
+    </div>
+    <div class="toast-body"><%= alert %></div>
+  </div>
+<% end %>

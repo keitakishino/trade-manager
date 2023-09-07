@@ -1,0 +1,34 @@
+<%= turbo_frame_tag product do %>
+  <%= bootstrap_form_with(model: product) do |form| %>
+    <div class="row py-2 border-top">
+      <div class="col-4 my-auto">
+        <%= product.name %>
+      </div>
+      <div class="col-2 my-auto">
+      <%= form.number_field :num,
+        skip_label: true,
+        label_as_placeholder: true,
+        wrapper: false,
+        control_class: "form-control form-control-sm"
+      %>
+      </div>
+      <div class="col-2 my-auto">
+        <%= form.number_field :price,
+          skip_label: true,
+          label_as_placeholder: true,
+          wrapper: false,
+          control_class: "form-control form-control-sm"
+        %>
+      </div>
+      <div class="col-2 my-auto">
+        所持者
+      </div>
+      <div class="col-2 my-auto">
+        <div class="d-flex justify-content-end">
+          <%= form.primary class: "btn btn-primary btn-sm me-2" %>
+          <%= link_to "やめる", product, class: "btn btn-sm btn-outline-secondary" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

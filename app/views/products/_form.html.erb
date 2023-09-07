@@ -1,0 +1,13 @@
+<%= bootstrap_form_with(model: product, data: { action: "turbo:submit-end->modal#close" }) do |form| %>
+  <%= form.hidden_field :name, value: name %>
+  カード名: <%= name %>
+  <div class="row">
+    <div class="col-4">
+      <%= form.number_field :num %>
+    </div>
+    <div class="col-4">
+      <%= form.number_field :price %>
+    </div>
+  </div>
+  <%= form.primary %>
+<% end%>

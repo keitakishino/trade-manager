@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :cards, only: %i[index]
+  resources :products
 end

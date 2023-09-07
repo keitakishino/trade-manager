@@ -1,0 +1,15 @@
+<h2 class="container gx-2">バインダー一覧</h2>
+
+<table class="table">
+  <thead>
+    <th scope="col">カード名</th>
+    <th scope="col">数量</th>
+    <th scope="col">価格</th>
+    <th scope="col">所持者</th>
+  </thead>
+  <tbody>
+    <% @products&.each do |product| %>
+      <%= render product %>
+    <% end %>
+  </tbody>
+</table>

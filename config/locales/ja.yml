@@ -3,7 +3,7 @@ ja:
     attributes:
       product:
         price: 価格
-        number: 個数
+        num: 個数
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

@@ -1,15 +1,21 @@
 <h2 class="container gx-2">バインダー一覧</h2>
 
-<table class="table">
-  <thead>
-    <th scope="col">カード名</th>
-    <th scope="col">数量</th>
-    <th scope="col">価格</th>
-    <th scope="col">所持者</th>
-  </thead>
-  <tbody>
-    <% @products&.each do |product| %>
-      <%= render product %>
-    <% end %>
-  </tbody>
+<div class="card-body mx-3">
+  <div class="row py-2">
+    <div class="col-4 mt-auto">
+      カード名
+    </div>
+    <div class="col-2 mt-auto">
+      <%= t('activerecord.attributes.product.num') %>
+      </div>
+    <div class="col-2 mt-auto">
+      <%= t('activerecord.attributes.product.price') %>
+    </div>
+    <div class="col-2 mt-auto">
+      所持者
+    </div>
+    <div class="col-2 mt-auto">
+    </div>
+  </div>
+  <%= render @products %>
 </table>

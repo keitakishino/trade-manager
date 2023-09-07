@@ -2,7 +2,7 @@ ja:
   activerecord:
     attributes:
       product:
-        price: 価格
+        price: 単価
         num: 個数
     errors:
       messages:

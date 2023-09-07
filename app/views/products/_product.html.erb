@@ -1,6 +1,22 @@
-<tr>
-  <td><%= product.name %></td>
-  <td><%= product.num %></td>
-  <td><%= product.price %></td>
-  <td>所持者</td>
-</tr>
+<%= turbo_frame_tag product do %>
+  <div class="row py-2 border-top">
+    <div class="col-4 my-auto">
+      <%= product.name %>
+    </div>
+    <div class="col-2 my-auto">
+      <%= product.num %>
+    </div>
+    <div class="col-2 my-auto">
+      <%= product.price %>
+    </div>
+    <div class="col-2 my-auto">
+      所持者
+    </div>
+    <div class="col-2 my-auto">
+      <div class="d-flex justify-content-end">
+        <%= link_to "編集", edit_product_path(product), class: "btn btn-sm btn-outline-primary me-2"%>
+        <%= button_to "削除", product, method: :delete, class: "btn btn-sm btn-outline-danger"%>
+      </div>
+    </div>
+  </div>
+<% end %>

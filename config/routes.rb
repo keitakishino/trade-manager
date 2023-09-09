@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   resources :cards, only: %i[index]
   resources :products
+  resources :traders, only: %i[new index destroy create]
 end

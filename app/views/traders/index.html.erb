@@ -1,0 +1,22 @@
+<h2 class="container gx-2">トレーダー一覧</h2>
+
+<div class="card-body mx-3">
+  <div class="row>
+    <div class="col-2 mt-auto">
+      <%= link_to "追加", new_trader_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+
+  <div class="row py-2">
+    <div class="col-3 mt-auto">
+      名前
+    </div>
+    <div class="col-3 mt-auto">
+    </div>
+    <div class="col-3 mt-auto">
+    </div>
+    <div class="col-1 mt-auto">
+    </div>
+  </div>
+  <%= render @traders %>
+</div>

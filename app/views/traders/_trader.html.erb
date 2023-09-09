@@ -1,0 +1,18 @@
+<%= turbo_frame_tag trader do %>
+  <div class="row py-2 border-top">
+    <div class="col-3 my-auto">
+      <%= trader.name %>
+    </div>
+    <div class="col-3 my-auto">
+      <%= link_to "バインダー", products_path, params: { trader: trader.id }, data: { turbo_frame: "_top" } %>
+    </div>
+    <div class="col-3 my-auto">
+      <%= link_to "ウィッシュリスト", products_path, params: { trader: trader.id }, data: { turbo_frame: "_top" } %>
+    </div>
+    <div class="col-1 my-auto">
+      <div class="d-flex justify-content-end">
+        <%= button_to "削除", trader, method: :delete, class: "btn btn-sm btn-outline-danger"%>
+      </div>
+    </div>
+  </div>
+<% end %>

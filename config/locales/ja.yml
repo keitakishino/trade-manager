@@ -4,6 +4,8 @@ ja:
       product:
         price: 単価
         num: 個数
+      trader:
+        name: 名前
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

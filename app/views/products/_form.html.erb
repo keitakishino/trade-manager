@@ -2,11 +2,14 @@
   <%= form.hidden_field :name, value: name %>
   カード名: <%= name %>
   <div class="row">
-    <div class="col-4">
+    <div class="col-2">
       <%= form.number_field :num %>
     </div>
-    <div class="col-4">
+    <div class="col-2">
       <%= form.number_field :price %>
+    </div>
+    <div class="col-3">
+      <%= form.select :trader, options_from_collection_for_select(@traders, :id, :name) %>
     </div>
   </div>
   <%= form.primary %>

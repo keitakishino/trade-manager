@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @traders = Trader.all
     @name = name_params[:name]
   end
 
@@ -49,7 +50,9 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :num, :price)
+    permited = params.require(:product).permit(:name, :num, :price, :trader)
+    permited[:trader] = Trader.find permited[:trader]
+    permited
   end
 
   def update_product_params

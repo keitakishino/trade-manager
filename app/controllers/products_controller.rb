@@ -51,7 +51,7 @@ class ProductsController < ApplicationController
 
   def product_params
     permited = params.require(:product).permit(:name, :num, :price, :trader)
-    permited[:trader] = Trader.find permited[:trader]
+    permited[:trader] = Trader&.find permited[:trader]
     permited
   end
 

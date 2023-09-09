@@ -27,8 +27,9 @@ RSpec.describe "Products", type: :request do
   end
 
   describe "POST /create" do
+    let(:trader) { create(:trader) }
     it "データが保存されること" do
-      post products_path, params: { product: { name: 'Brainstorm', num: 1, price: 100} }, as: :turbo_stream
+      post products_path, params: { product: { name: 'Brainstorm', num: 1, price: 100, trader: trader.id } }, as: :turbo_stream
       expect(Product.find_by(name: 'Brainstorm')).to be_present
     end
   end
